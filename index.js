@@ -20,7 +20,6 @@ client.on("guildMemberAdd", (member) => {
   member.addRole(guild.roles.find(role => role.name == "비구매자"));
 });
 
-
 client.on("guildMemberRemove", (member) => {
   const guild = member.guild;
   const deleteUser = member.user;
@@ -33,7 +32,11 @@ client.on('message', (message) => {
   if(message.author.bot) return;
 
   if(message.content == 'neon') {
-    return message.reply('켜져있습니도.');
+    return message.reply('작동');
+  }
+
+  if(message.content == '!이벤트 참여') {
+    return message.reply('정상적으로 참여되었습니다.');
   }
 
   if(message.content == '채유Chae Yu') {
